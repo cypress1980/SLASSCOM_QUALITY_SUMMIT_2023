@@ -10,11 +10,11 @@ class LoginPage {
     return this;
   }
    clickSubmitButton() {
-    cy.get('[type="submit"]').eq(0).click();
+    cy.get('[type="submit"]').eq(2).click();
     return this;
   }
    verifyPageTitle() {
-    return cy.title().should("eq", "Search -");
+    return cy.title().should("eq", "My Account");
   }
 }
 const login = new LoginPage();
