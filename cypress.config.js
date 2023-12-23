@@ -5,7 +5,7 @@ module.exports = defineConfig({
     video: false,
     screenshotOnRunFailure: true,
     e2e: {
-        //specPattern: "**/*.feature",
+        specPattern: "**/*.feature",
       setupNodeEvents(on, config) {
         on("file:preprocessor", cucumber());
         return getCompareSnapshotsPlugin(on, config);
