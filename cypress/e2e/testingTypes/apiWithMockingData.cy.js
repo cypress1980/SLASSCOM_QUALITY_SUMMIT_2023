@@ -1,6 +1,6 @@
 describe("API Mocking in Cypress using cy.intercept Methid ", () => {
   beforeEach(() => {
-    cy.visit("https://angular.realworld.io/");
+    cy.visit("https://demo.realworld.io/");
     cy.intercept("GET", "https://api.realworld.io/api/tags", {
       fixture: "mockTags.json",
     });
