@@ -18,7 +18,7 @@ describe("API Mocking in Cypress using cy.intercept Methid ", () => {
   });
 
   it("Mock the Article feed, and then validate on UI", () => {
-    cy.get("app-favorite-button.pull-xs-right").contains("10");
+    cy.get("h1").contains("Hi qaautomationlabs.com");
     cy.get(".author").contains("Kailash Pathak");
     cy.get(".preview-link > p").contains("SLASSCOM QUALITY SUMMIT 2023");
   });

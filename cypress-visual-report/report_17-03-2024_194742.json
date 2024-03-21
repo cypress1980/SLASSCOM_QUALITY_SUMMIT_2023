@@ -1,0 +1,31 @@
+{
+  "total": 1,
+  "totalPassed": 1,
+  "totalFailed": 0,
+  "totalSuites": 1,
+  "suites": [
+    {
+      "name": "visualTesting.cy.js",
+      "path": "cypress/e2e/testingTypes/visualTesting.cy.js",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "visualTesting.cy-home-page",
+          "percentage": 0,
+          "failureThreshold": 0.01,
+          "specPath": "cypress/e2e/testingTypes/visualTesting.cy.js",
+          "specFilename": "visualTesting.cy.js",
+          "baselinePath": "cypress-visual-screenshots/baseline/visualTesting.cy-home-page.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-visual-screenshots/comparison/visualTesting.cy-home-page.png"
+        }
+      ]
+    }
+  ],
+  "startedAt": "2024-03-17T14:17:42.834Z",
+  "endedAt": "2024-03-17T14:19:43.946Z",
+  "duration": 96210,
+  "browserName": "electron",
+  "browserVersion": "118.0.5993.159",
+  "cypressVersion": "13.6.6"
+}

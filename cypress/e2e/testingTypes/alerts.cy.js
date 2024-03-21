@@ -7,10 +7,11 @@ describe('Example for JavaScript Alerts, Confirm, Prompt in Cypress', () => {
       cy.contains('Click for JS Alert').click()
       //cy.on(): This is a Cypress command that allows you to listen for specific events during the test execution.
       //'window:alert': This is the event name that Cypress listens for. Specifically,
-      
+
       cy.on('window:alert', (str) => {
         expect(str).to.equal('I am a JS Alert')
       })
+
       cy.on('window:confirm', () => true)
       cy.get('#result').should('have.text', 'You successfully clicked an alert')
     })
@@ -31,10 +32,13 @@ describe('Example for JavaScript Alerts, Confirm, Prompt in Cypress', () => {
     })
   
     it('Input text in prompt, Click OK and Validate Input Text', () => {
-      cy.window().then(($win) => {
-        cy.stub($win, 'prompt').returns('This is a test text')
+        // cy.window(): gets the global window object of the browser.
+        //.then(($win) => {...}) is a callback function that receives the window object as $win.
+      cy.window().then((winObj) => {
+        cy.stub(winObj, 'prompt').returns('Hi,Test Tribe')
         cy.contains('Click for JS Prompt').click()
       })
-      cy.get('#result').should('have.text', 'You entered: This is a test text')
+      cy.get('#result').should('have.text', 'You entered: Hi,Test Tribe')
     })
-  })
+})
+  //https://docs.cypress.io/api/cypress-api/catalog-of-events
