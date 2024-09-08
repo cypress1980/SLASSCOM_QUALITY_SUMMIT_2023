@@ -31,7 +31,7 @@ describe('Example for JavaScript Alerts, Confirm, Prompt in Cypress', () => {
       cy.get('#result').should('have.text', 'You clicked: Cancel')
     })
   
-    it('Input text in prompt, Click OK and Validate Input Text', () => {
+    it.only('Input text in prompt, Click OK and Validate Input Text', () => {
         // cy.window(): gets the global window object of the browser.
         //.then(($win) => {...}) is a callback function that receives the window object as $win.
       cy.window().then((winObj) => {

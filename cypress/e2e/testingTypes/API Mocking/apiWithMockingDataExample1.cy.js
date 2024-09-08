@@ -1,4 +1,4 @@
-describe("API Mocking in Cypress using cy.intercept Methid ", () => {
+describe("API Mocking in Cypress using cy.intercept Method ", () => {
   beforeEach(() => {
     cy.visit("https://demo.realworld.io/");
     cy.intercept("GET", "https://api.realworld.io/api/tags", {
@@ -13,13 +13,13 @@ describe("API Mocking in Cypress using cy.intercept Methid ", () => {
 
   it("Mock API Tags, and then validate on UI", () => {
     cy.get(".tag-list", { timeout: 1000 })
-      .should("contain", "Cypress")
-      .and("contain", "Playwright");
+      .should("contain", "The Bug Detective")
+      .and("contain", "Nigeria Software Testers");
   });
 
   it("Mock the Article feed, and then validate on UI", () => {
-    cy.get("h1").contains("Hi qaautomationlabs.com");
+    cy.get("h1").contains("Welcome to Test Feast 2024");
     cy.get(".author").contains("Kailash Pathak");
-    cy.get(".preview-link > p").contains("SLASSCOM QUALITY SUMMIT 2023");
+    cy.get(".preview-link > p").contains("Nigeria Software Testing Qualification Board");
   });
 });

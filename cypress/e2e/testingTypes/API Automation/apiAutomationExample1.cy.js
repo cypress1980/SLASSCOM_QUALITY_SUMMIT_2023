@@ -2,6 +2,8 @@ describe("API Automation Using GoRest API", () => {
   let randomNumber = Math.floor(Math.random() * 1000);
   let userId;
   it("POST API Automation Using GoRest API", () => {
+
+    //body data
     const user = {
       name: "John Doe",
       email: "johndoe123" + randomNumber + "@example.com",
@@ -39,7 +41,7 @@ describe("API Automation Using GoRest API", () => {
   });
   it("PUT API Automation Using GoRest API", () => {
     const user = {
-      name: "Time Cook",
+      name: "Tim Cook",
       email: "TimCook123" + randomNumber + "@example.com",
       gender: "male",
       status: "active",

@@ -7,7 +7,7 @@ describe("Asseration In Cypress", () => {
   it("Explicit Assertion", () => {
     cy.visit("https://example.com");
     cy.get("h1").then(($h1) => {
-      const text = $h1.text();
+      const text = $h1.debug().text();
       expect(text).to.contain("Welcome"); // Explicit assertion
     });
   });

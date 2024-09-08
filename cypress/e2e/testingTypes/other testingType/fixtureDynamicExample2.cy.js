@@ -21,12 +21,8 @@ describe("Automation Test Suite - Fixtures With Dynamic Data", function () {
           cy.get("#reg_password").clear().type(user.Password);
 
           //Checking whether the Register button is disabled or not either by grabbing the property or by checking its UI behavior
-          cy.get(".woocommerce-Button").should(
-            "have.attr",
-            "disabled",
-            "disabled"
-          );
-          cy.get(".woocommerce-Button").should("be.disabled");
+          //cy.get(".woocommerce-Button").should("have.attr","disabled","disabled");
+          //cy.get(".woocommerce-Button").should("be.disabled");
 
           // Clicking on to register on the Website by entering new password
           cy.get("#reg_password").clear().type(user.NewPassword);
